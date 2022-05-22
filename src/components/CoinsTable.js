@@ -18,14 +18,14 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { CoinList } from "../config/api";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-export default function CoinsTable() {
+const CoinsTable = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -50,7 +50,7 @@ export default function CoinsTable() {
   });
 
   const classes = useStyles();
-  const history = useHistory();
+  const navigation = useNavigate();
 
   const darkTheme = createTheme({
     palette: {
@@ -127,7 +127,7 @@ export default function CoinsTable() {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => history.push(`/coins/${row.id}`)}
+                        onClick={() => navigation(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
                       >
@@ -208,3 +208,5 @@ export default function CoinsTable() {
     </ThemeProvider>
   );
 }
+
+export default CoinsTable;

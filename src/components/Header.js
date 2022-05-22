@@ -11,7 +11,7 @@ import {
   makeStyles,
   ThemeProvider,
 } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,11 +33,11 @@ const darkTheme = createTheme({
   },
 });
 
-function Header() {
+const Header = () => {
   const classes = useStyles();
   const { currency, setCurrency } = CryptoState();
 
-  const history = useHistory();
+  const navigation = useNavigate();
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -45,13 +45,12 @@ function Header() {
         <Container>
           <Toolbar>
             <Typography
-              onClick={() => history.push(`/`)}
+              onClick={() => navigation(`/`)}
               variant="h6"
               className={classes.title}
             >
               Ryptoreum
             </Typography>
-            {/* <Button color="inherit">Login</Button> */}
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"
@@ -60,9 +59,9 @@ function Header() {
               style={{ width: 100, height: 40, marginLeft: 15 }}
               onChange={(e) => setCurrency(e.target.value)}
             >
-              <MenuItem value={"DKK"}>DKK</MenuItem>
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"EUR"}>EUR</MenuItem>
+              <MenuItem value={"DKK"}>DKK</MenuItem>
             </Select>
           </Toolbar>
         </Container>

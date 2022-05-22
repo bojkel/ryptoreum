@@ -21,7 +21,7 @@ const Carousel = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     carousel: {
       height: "50%",
       display: "flex",
