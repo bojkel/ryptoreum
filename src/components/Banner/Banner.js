@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Banner() {
+const Banner = () => {
   const classes = useStyles();
 
   return (

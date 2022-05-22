@@ -5,7 +5,7 @@ import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
 import { TrendingCoins } from "../../config/api";
 import { CryptoState } from "../../CryptoContext";
-import { numberWithCommas } from "../CoinsTable";
+import { numberWithCommas } from "../../config/regex_service";
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);

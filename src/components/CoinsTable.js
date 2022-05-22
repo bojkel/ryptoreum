@@ -16,14 +16,11 @@ import {
   Table,
   Paper,
 } from "@material-ui/core";
-import axios from "axios";
+import axios from "axios"
+import { numberWithCommas } from "../config/regex_service";
 import { CoinList } from "../config/api";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
-
-export function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 const CoinsTable = () => {
   const [coins, setCoins] = useState([]);
@@ -112,7 +109,7 @@ const CoinsTable = () => {
                         fontFamily: "Roboto",
                       }}
                       key={head}
-                      align={head === "Coin" ? "" : "right"}
+                      align={head === "Coin" ? "left" : "right"}
                     >
                       {head}
                     </TableCell>
@@ -191,7 +188,7 @@ const CoinsTable = () => {
         </TableContainer>
 
         <Pagination
-          count={(handleSearch()?.length / 10).toFixed(0)}
+          count={(handleSearch()?.length / 10)}
           style={{
             padding: 20,
             width: "100%",
