@@ -1,8 +1,7 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 const News = () => {
-    const [news, setNews] = useState([]);
 
     useEffect(()=>{
         console.log('lmao lol')

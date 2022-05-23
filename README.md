@@ -1,3 +1,18 @@
+# Ryptoreum
+A simple React cryptocurrency app
+
+Live Project Link
+Ryptoreum: https://ryptoreum.netlify.app/
+
+# Introduction
+
+This project is built with the help of React, Chart.js and Material UI. 
+Coin Gecko API was used for fetching the corresponding data.
+
+# BUY DOT !!!
+
+Colors and theme inspired by Polkadot™
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
