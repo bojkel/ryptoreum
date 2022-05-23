@@ -159,8 +159,7 @@ const CoinsTable = () => {
                           </div>
                         </TableCell>
                         <TableCell align="right">
-                          {symbol}{" "}
-                          {numberWithCommas(row.current_price.toFixed(2))}
+                          {symbol}{numberWithCommas(row.current_price.toFixed(2))}
                         </TableCell>
                         <TableCell
                           align="right"
@@ -173,11 +172,7 @@ const CoinsTable = () => {
                           {row.price_change_percentage_24h.toFixed(2)}%
                         </TableCell>
                         <TableCell align="right">
-                          {symbol}{" "}
-                          {numberWithCommas(
-                            row.market_cap.toString().slice(0, -6)
-                          )}
-                          M
+                          {symbol}{numberWithCommas(row.market_cap.toString().slice(0, -6))}M
                         </TableCell>
                       </TableRow>
                     );
