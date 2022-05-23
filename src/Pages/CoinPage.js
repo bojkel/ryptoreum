@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import ReactHtmlParser from "react-html-parser";
 import { SingleCoin } from "../config/api";
 import CoinInfo from '../components/CoinInfo';
-import { numberWithCommas } from "../config/regex_service";
+import { numberWithCommas } from "../services/regex_service";
 import { CryptoState } from "../CryptoContext";
 
 const CoinPage = () => {

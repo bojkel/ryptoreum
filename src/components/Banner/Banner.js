@@ -3,14 +3,14 @@ import Carousel from "./Carousel";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
-    backgroundImage: "url(./banner2.jpg)",
+    backgroundImage: "url(./ryptoreum-banner.jpg)",
   },
   bannerContent: {
     height: 400,
     display: "flex",
     flexDirection: "column",
     paddingTop: 25,
-    justifyContent: "space-around",
+    justifyContent: "space-around"
   },
   tagline: {
     display: "flex",
@@ -52,7 +52,7 @@ const Banner = () => {
               fontFamily: "Roboto",
             }}
           >
-            Get all data about your favourite cryptocurrencies
+            Get to know your favourite cryptocurrencies better!
           </Typography>
         </div>
         <Carousel />

@@ -44,13 +44,26 @@ const Header = () => {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography
-              onClick={() => navigation(`/`)}
-              variant="h6"
-              className={classes.title}
-            >
-              Ryptoreum
-            </Typography>
+            <Container style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start"
+            }}>
+              <Typography
+                onClick={() => navigation(`/`)}
+                variant="h6"
+                className={classes.title}
+              >
+                Ryptoreum
+              </Typography>
+              <Typography
+                onClick={() => navigation(`/news`)}
+                variant="h6"
+                className={classes.title}
+              >
+                News
+              </Typography>
+            </Container>
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"

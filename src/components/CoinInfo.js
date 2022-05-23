@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJs } from 'chart.js';
 import {
   CircularProgress,
   createTheme,

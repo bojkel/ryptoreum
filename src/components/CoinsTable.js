@@ -17,7 +17,7 @@ import {
   Paper,
 } from "@material-ui/core";
 import axios from "axios"
-import { numberWithCommas } from "../config/regex_service";
+import { numberWithCommas } from "../services/regex_service";
 import { CoinList } from "../config/api";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
@@ -89,7 +89,7 @@ const CoinsTable = () => {
           Search For a Cryptocurrency
         </Typography>
         <TextField
-          label="Search For a Crypto Currency.."
+          label="Search For a Cryptocurrency.."
           variant="outlined"
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}

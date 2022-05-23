@@ -5,7 +5,7 @@ import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
 import { TrendingCoins } from "../../config/api";
 import { CryptoState } from "../../CryptoContext";
-import { numberWithCommas } from "../../config/regex_service";
+import { numberWithCommas } from "../../services/regex_service";
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
@@ -25,7 +25,7 @@ const Carousel = () => {
     carousel: {
       height: "50%",
       display: "flex",
-      alignItems: "center",
+      alignItems: "center"
     },
     carouselItem: {
       display: "flex",
@@ -33,7 +33,7 @@ const Carousel = () => {
       alignItems: "center",
       cursor: "pointer",
       textTransform: "uppercase",
-      color: "white",
+      color: "white"
     },
   }));
 
@@ -84,8 +84,8 @@ const Carousel = () => {
       <AliceCarousel
         mouseTracking
         infinite
-        autoPlayInterval={1000}
-        animationDuration={1500}
+        autoPlayInterval={100}
+        animationDuration={2000}
         disableDotsControls
         disableButtonsControls
         responsive={responsive}
