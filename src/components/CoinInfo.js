@@ -15,12 +15,11 @@ import { CryptoState } from "../CryptoContext";
 
 
 const CoinInfo = ({coin}) => {
+
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
   const { currency } = CryptoState();
   const [flag, setflag] = useState(false);
-  
-  ChartJs.register(Line);
 
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -47,8 +46,6 @@ const CoinInfo = ({coin}) => {
     setflag(true);
     setHistoricData(data.prices);
   };
-
-
 
   useEffect(() => {
     fetchHistoricData();
