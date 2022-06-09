@@ -56,13 +56,6 @@ const Header = () => {
               >
                 Ryptoreum
               </Typography>
-              <Typography
-                onClick={() => navigation(`/news`)}
-                variant="h6"
-                className={classes.title}
-              >
-                News
-              </Typography>
             </Container>
             <Select
               variant="outlined"

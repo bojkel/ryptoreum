@@ -3,7 +3,6 @@ import Homepage from "./Pages/HomePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CoinPage from "./Pages/CoinPage";
 import Header from "./components/Header";
-import NewsPage from "./Pages/NewsPage";
 
 const useStyles = makeStyles(() => ({
   App: {
@@ -23,7 +22,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/coins" element={<Homepage/>} />
-          <Route path="/news" element={<NewsPage/>} />
           <Route path="/coins/:id" element={<CoinPage/>} />
         </Routes>
       </div>
